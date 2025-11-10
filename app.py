@@ -2,7 +2,6 @@ import streamlit as st
 from zhipuai import ZhipuAI
 
 # 初始化 Zhipu 客户端（建议用环境变量方式处理 key）
-#client_zp =  ZhipuAI(api_key="0a9aa2492854432a91c059abe8d98d6d.pTabYtSrCgTQiqsV")
 client_zp = ZhipuAI(api_key=st.secrets["ZHIPU_API_KEY"])
 
 # 分析函数
@@ -54,3 +53,4 @@ if st.button("开始分析"):
 
             except Exception as e:
                 st.error("出错了，请稍后再试😂")
+
